@@ -1,10 +1,10 @@
 Package: assignq3
-Title: What the Package Does (One Line, Title Case)
+Title: Queuing System Simulation
 Version: 0.0.0.9000
 Authors@R: 
     person("Benjamin", "Kandic", , "benjamin.kandic@students.mq.edu.au", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Given the arrival & service time columns of a dataset and the number of servers this function simulates when the service begins and ends along with the specific server during the period.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -17,3 +17,5 @@ Suggests:
 Config/testthat/edition: 3
 URL: https://github.com/epizoic/assignq3
 BugReports: https://github.com/epizoic/assignq3/issues
+Imports: 
+    tibble

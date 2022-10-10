@@ -1,7 +1,7 @@
 #' Queuing System Simulation
 #'
 #' @description Given the arrival & service time columns of a dataset and the number
-#' of servers this function simulates when the service begins and ends along with
+#' of servers, this function simulates when the service begins and ends along with
 #' the specific server during the period.
 #'
 #' @param Arrivals Arrival time column of dataset
@@ -12,6 +12,8 @@
 #' @export
 #'
 #' @examples
+#' data(bank)
+#' str(bank)
 #' Multiserver(bank$arrival_time, bank$service_time, NumServers = 3)
 
 Multiserver <- function(Arrivals, ServiceTimes, NumServers = 1) {

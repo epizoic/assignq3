@@ -19,5 +19,6 @@ Example Bank Data to Use in Multiserve simulation
 }
 \examples{
 data(bank)
+str(bank)
 }
 \keyword{datasets}

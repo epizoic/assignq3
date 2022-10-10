@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# assignq3
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of assignq3 is to simulate a queuing system given a dataset and the number of servers
+
+## Installation
+
+You can install the development version of assignq3 from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("epizoic/assignq3")
+```
+
+## Example
+
+This is a basic example which shows how to use the simulation:
+
+```{r example}
+library(assignq3)
+library(tibble)
+data(bank)
+str(bank)
+Multiserver(bank$arrival_time, bank$service_time, NumServers = 3)
+```

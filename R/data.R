@@ -8,4 +8,5 @@
 #'
 #' @examples
 #' data(bank)
+#' str(bank)
 "bank"
