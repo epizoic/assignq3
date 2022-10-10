@@ -8,5 +8,6 @@
 
 library(testthat)
 library(assignq3)
+library(dplyr)
 
 test_check("assignq3")

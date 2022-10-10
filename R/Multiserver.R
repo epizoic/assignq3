@@ -11,6 +11,7 @@
 #' @return Tibble with 4 variables; Arrivals, ServiceBegins, ChosenServer, ServiceEnds
 #' @export
 #'
+#' @import dplyr
 #' @examples
 #' data(bank)
 #' str(bank)
@@ -49,7 +50,7 @@ for (i in seq_along(Arrivals)){
   # server becomes available again after serving ith customer
   AvailableFrom[ChosenServer[i]] <- ServiceEnds[i]
 }
-  out <- tibble(Arrivals, ServiceBegins, ChosenServer, ServiceEnds)
+  out <- dplyr::tibble(Arrivals, ServiceBegins, ChosenServer, ServiceEnds)
   return(out)
 }
 
