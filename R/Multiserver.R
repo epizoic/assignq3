@@ -8,7 +8,7 @@
 #' @param ServiceTimes Service time of dataset
 #' @param NumServers Specify the number of servers for the simulation
 #'
-#' @return Data Frame with 4 variables; Arrivals, ServiceBegins, ChosenServer, ServiceEnds
+#' @return Tibble with 4 variables; Arrivals, ServiceBegins, ChosenServer, ServiceEnds
 #' @export
 #'
 #' @examples
@@ -47,7 +47,7 @@ for (i in seq_along(Arrivals)){
   # server becomes available again after serving ith customer
   AvailableFrom[ChosenServer[i]] <- ServiceEnds[i]
 }
-  out <- data.frame(Arrivals, ServiceBegins, ChosenServer, ServiceEnds)
+  out <- tibble(Arrivals, ServiceBegins, ChosenServer, ServiceEnds)
   return(out)
 }
 
